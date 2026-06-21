@@ -1,82 +1,71 @@
 # Djaya Massage & Reflexology Batam
 
-Premium traditional Indonesian spa website — a fast, mobile-first, single-page static site.
-Built faithfully on the provided `code.html` layout and the `DESIGN.md` design system ("Nusantara Wellness").
+Premium traditional Indonesian spa website — mobile-first, bilingual (ID/EN), built faithfully from the `Indonesia massage spa design` mockup.
 
-**Live target:** `https://djaya-apps.vercel.app/`
+**Live:** [djaya-apps.vercel.app](https://djaya-apps.vercel.app/)
 
-## Tech
+## Tech stack
 
-- Static `index.html` — no build step required to deploy.
-- Tailwind CSS via CDN (same setup as the source `code.html`).
-- Google Fonts: Playfair Display + Montserrat; Material Symbols icons.
-- Real business photos served from `assets/img/` as WebP with JPEG fallback.
-- SEO: semantic HTML, Open Graph / Twitter cards, `DaySpa` JSON-LD, `robots.txt`, `sitemap.xml`.
+- **Next.js 14** (App Router, static export-ready SSG)
+- **React 18** + **TypeScript**
+- **Tailwind CSS** — design tokens match the Claude design file exactly
+- **Framer Motion** — subtle scroll reveals
+- **next/font** — Cormorant Garamond + Mulish (self-hosted, no layout shift)
 
 ## Project structure
 
 ```
 .
-├── index.html                 # Production site (source of truth: code.html + DESIGN.md)
-├── code.html                  # Original design reference (kept, unmodified)
-├── DESIGN.md                  # Design system reference
-├── vercel.json                # Static hosting config + security headers + asset caching
-├── robots.txt / sitemap.xml   # SEO
-├── assets/img/                # Optimized images (.webp + .jpg) + favicon.svg
-├── scripts/optimize-images.mjs# One-off WebP optimizer (dev only)
-├── Logo.pdf                   # Official logo (print source — see note below)
-└── *.jpeg                     # Original source photos (kept as masters)
+├── app/                    # Next.js App Router (layout, page, globals)
+├── components/             # UI sections (Header, Hero, Menu, Reviews, …)
+├── lib/                    # i18n strings, treatment menu data, reviews
+├── public/img/             # Optimized images served at /img/*
+├── assets/img/             # Source photography & brand assets
+├── Indonesia massage spa design/   # Design source of truth (Djaya Massage.dc.html)
+└── public/robots.txt, sitemap.xml
 ```
 
-## Local preview
-
-Any static server works, e.g.:
-
-```bash
-npx serve .
-# or
-python -m http.server 5173
-```
-
-Then open the printed URL.
-
-## Re-optimizing images (optional, dev only)
+## Local development
 
 ```bash
 npm install
-npm run optimize:images
+npm run dev
 ```
 
-This regenerates `.webp` variants and the `og-card.jpg` social image from the `.jpg` files in `assets/img/`.
+Open [http://localhost:3000](http://localhost:3000).
+
+## Production build
+
+```bash
+npm run build
+npm start
+```
 
 ## Deploy to Vercel
 
-### Option A — GitHub integration (recommended, auto-deploy)
+### GitHub auto-deploy (recommended)
 
-1. Push this repo to GitHub (`https://github.com/adithyodw/djaya-apps`).
-2. In Vercel: **New Project → Import** the repo.
-3. Framework preset: **Other**. Build command: _none_. Output directory: _root_.
-4. Deploy. Every push to `main` → production; every branch/PR → preview.
+1. Push this repo to [github.com/adithyodw/djaya-apps](https://github.com/adithyodw/djaya-apps).
+2. In [Vercel](https://vercel.com/adithyodws-projects/djaya-apps): **Import** the GitHub repo.
+3. Framework preset: **Next.js** (auto-detected). Build: `next build`. Output: default.
+4. Every push to `main` deploys production; branches/PRs get preview URLs.
 
-### Option B — Vercel CLI
+### Vercel CLI
 
 ```bash
-npm install -g vercel
-vercel login
-vercel          # preview deploy
-vercel --prod   # production deploy
+npx vercel          # preview
+npx vercel --prod   # production
 ```
 
-## Booking
+## Booking & contact
 
 All booking CTAs open WhatsApp with a pre-filled message:
 
-> Hello Djaya Massage Batam, I would like to book a treatment.
+- **WhatsApp:** +62 852-7835-5590
+- **Instagram:** [@djayamassage](https://www.instagram.com/djayamassage/)
+- **Address:** Ruko Penuin Centre Blok A No. 14, Batu Selicin, Lubuk Baja, Batam 29411
+- **Hours:** Daily 10:00 – 22:00 WIB
 
-Number: **+62 852-7835-5590** · Instagram: **@djayamassage**
+## Design fidelity
 
-## Notes / to verify before launch
-
-- **Operating hours** (`10:00–22:00 WIB`, daily) are carried over from `code.html` — confirm with the business and update both the Location section and the JSON-LD `openingHoursSpecification`.
-- **Logo:** the official `Logo.pdf` is the print master. The web header uses the `DJAYA` wordmark (as in `code.html`); the favicon uses the brand cairn motif. To use the exact logo mark on the site, export `Logo.pdf` to PNG/SVG and drop it into `assets/img/`.
-- **Canonical domain:** update the `https://djaya-apps.vercel.app/` URL in `index.html` (canonical + OG), `robots.txt`, and `sitemap.xml` once the final domain is known.
+Layout, typography, colors, spacing, and section order follow `Indonesia massage spa design/Djaya Massage.dc.html` — no sections removed, no layout reinterpretation.
