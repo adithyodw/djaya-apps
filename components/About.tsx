@@ -20,10 +20,12 @@ export default function About() {
   const { lang } = useLang();
   const tr = t(lang);
   return (
-    <section className="px-[26px] pt-14 pb-2">
+    <section id="about" className="px-[26px] pt-14 pb-2" aria-labelledby="about-heading">
       <Reveal>
         <div className="text-[11px] tracking-[0.26em] uppercase text-gold-ink font-bold mb-3.5">{tr.aboutLabel}</div>
-        <h2 className="font-display font-semibold text-[33px] leading-[1.12] text-ink m-0 mb-[18px]">{tr.aboutHead}</h2>
+        <h2 id="about-heading" className="font-display font-semibold text-[33px] leading-[1.12] text-ink m-0 mb-[18px]">
+          {tr.aboutHead}
+        </h2>
         <p className="text-[15px] leading-[1.72] text-ink-soft m-0 mb-4">{tr.aboutBody1}</p>
         <p className="text-[15px] leading-[1.72] text-ink-soft m-0 mb-7">{tr.aboutBody2}</p>
       </Reveal>

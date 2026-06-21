@@ -8,6 +8,7 @@ import Signature from "@/components/Signature";
 import Booking from "@/components/Booking";
 import Reviews from "@/components/Reviews";
 import Location from "@/components/Location";
+import FaqSection from "@/components/FaqSection";
 import InstagramSection from "@/components/InstagramSection";
 import Footer from "@/components/Footer";
 import StickyBook from "@/components/StickyBook";
@@ -36,6 +37,7 @@ export default function Home() {
             <Signature />
             <Booking />
             <Reviews />
+            <FaqSection />
             <Location />
             <InstagramSection />
             <Footer />

@@ -52,13 +52,13 @@ export function t(lang: Lang) {
     aboutHead: L(lang, "Ketenangan yang berakar pada tradisi.", "Calm, rooted in tradition."),
     aboutBody1: L(
       lang,
-      "Djaya menghadirkan kehangatan keramahan Indonesia melalui sentuhan terapis profesional dan ramuan tradisional pilihan. Setiap perawatan dirancang untuk memulihkan tubuh dan menenangkan pikiran.",
-      "Djaya brings the warmth of Indonesian hospitality through the hands of professional therapists and time-honoured traditional remedies. Every treatment is designed to restore the body and quiet the mind.",
+      "Djaya Massage & Reflexology adalah spa massage dan reflexology premium di Batam — menghadirkan kehangatan keramahan Indonesia melalui terapis profesional dan ramuan tradisional pilihan.",
+      "Djaya Massage & Reflexology is a premium massage and reflexology spa in Batam — bringing Indonesian hospitality through professional therapists and time-honoured traditional remedies.",
     ),
     aboutBody2: L(
       lang,
-      "Kami hanya menggunakan minyak pijat Indonesia autentik berkualitas tinggi — sebuah ruang untuk benar-benar beristirahat di jantung Kota Batam.",
-      "We use only authentic, high-quality Indonesian massage oils — a space to truly rest in the heart of Batam.",
+      "Dari refleksi kaki hingga pijat tradisional Bali, setiap perawatan dirancang untuk memulihkan tubuh dan menenangkan pikiran — di Penuin Centre, dekat Grand Batam Mall.",
+      "From foot reflexology to Balinese warm-oil massage, every treatment restores body and mind — in Penuin Centre, near Grand Batam Mall and Nagoya.",
     ),
     pillar1t: L(lang, "Terapis Profesional", "Pro Therapists"),
     pillar1d: L(lang, "Terlatih & berpengalaman", "Trained & experienced"),
@@ -73,8 +73,8 @@ export function t(lang: Lang) {
     menuHead: L(lang, "Daftar Treatment", "Treatment Menu"),
     menuSub: L(
       lang,
-      "Harga dalam Rupiah. Sesi tersedia 30–150 menit.",
-      "Prices in Rupiah. Sessions from 30–150 minutes.",
+      "Menu massage & reflexology Batam — harga dalam Rupiah, sesi 30–150 menit.",
+      "Massage & reflexology Batam menu — prices in Rupiah, sessions from 30–150 minutes.",
     ),
 
     sigTitle: "3-in-1 Healing Ritual",
@@ -102,13 +102,22 @@ export function t(lang: Lang) {
     revAll: L(lang, "Baca semua ulasan di Google", "Read all reviews on Google"),
 
     locLabel: L(lang, "Lokasi", "Location"),
-    locHead: L(lang, "Kunjungi Kami", "Visit Us"),
+    locHead: L(lang, "Kunjungi Kami di Batam", "Visit Us in Batam"),
     locNear: L(lang, "Dekat Grand Batam Mall & A2 Foodcourt", "Near Grand Batam Mall & A2 Foodcourt"),
     locBtn: L(lang, "Buka di Google Maps", "Open in Google Maps"),
 
     igHead: L(lang, "Ikuti Perjalanan Kami", "Follow Our Journey"),
     igFollow: L(lang, "Ikuti", "Follow"),
     igReels: L(lang, "Reels Pilihan", "Featured Reels"),
+
+    faqLabel: L(lang, "Pertanyaan Umum", "FAQ"),
+    faqHead: L(
+      lang,
+      "Massage & reflexology di Batam",
+      "Massage & reflexology in Batam",
+    ),
+
+    footerCredit: L(lang, "Website oleh", "Website by"),
   };
 }
 

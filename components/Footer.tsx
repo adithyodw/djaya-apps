@@ -6,6 +6,7 @@ import Logo from "./Logo";
 
 const IG = "https://www.instagram.com/djayamassage/";
 const WA = "https://wa.me/6285278355590";
+const ADW = "https://adithyodw-portfolio.vercel.app/";
 
 export default function Footer() {
   const { lang } = useLang();
@@ -46,7 +47,18 @@ export default function Footer() {
         </a>
       </div>
       <div className="text-[11px] text-[#6b5a44] border-t border-[rgba(212,175,97,0.16)] pt-[18px]">
-        © 2026 Djaya Massage &amp; Reflexology Batam
+        <div>© 2026 Djaya Massage &amp; Reflexology Batam</div>
+        <div className="mt-2.5 text-[10.5px] tracking-[0.06em] text-[#5a4a38]">
+          {tr.footerCredit}{" "}
+          <a
+            href={ADW}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#a89478] no-underline border-b border-[rgba(168,148,120,0.35)] hover:text-gold-3 hover:border-gold-ink transition-colors"
+          >
+            ADW
+          </a>
+        </div>
       </div>
     </footer>
   );

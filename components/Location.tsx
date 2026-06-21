@@ -14,7 +14,7 @@ export default function Location() {
   const { lang } = useLang();
   const tr = t(lang);
   return (
-    <section className="px-[22px] pb-[52px]">
+    <section id="location" className="px-[22px] pb-[52px]" aria-labelledby="location-heading">
       <Reveal>
         <div
           className="bg-white border border-card-line rounded-[22px] overflow-hidden"
@@ -29,7 +29,9 @@ export default function Location() {
           />
           <div className="px-6 py-[22px]">
             <div className="text-[11px] tracking-[0.26em] uppercase text-gold-ink font-bold mb-2.5">{tr.locLabel}</div>
-            <h3 className="font-display font-semibold text-[25px] text-ink m-0 mb-3">{tr.locHead}</h3>
+            <h3 id="location-heading" className="font-display font-semibold text-[25px] text-ink m-0 mb-3">
+              {tr.locHead}
+            </h3>
             <div className="flex gap-[11px] mb-2">
               <span className="flex-none mt-0.5">
                 <PinIcon />
