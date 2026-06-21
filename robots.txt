@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://djaya-massage.vercel.app/sitemap.xml
