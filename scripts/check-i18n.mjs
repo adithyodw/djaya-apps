@@ -1,0 +1,12 @@
+import { readFileSync } from "node:fs";
+const h = readFileSync("index.html", "utf8");
+const used = [...new Set([...h.matchAll(/data-i18n="([^"]+)"/g)].map((m) => m[1]))];
+const idBlock = h.match(/id:\s*{([\s\S]*?)\n\s*},\n\s*en:/)[1];
+const enBlock = h.match(/en:\s*{([\s\S]*?)\n\s*}\n\s*};/)[1];
+const idKeys = new Set([...idBlock.matchAll(/(\w+):/g)].map((m) => m[1]));
+const enKeys = new Set([...enBlock.matchAll(/(\w+):/g)].map((m) => m[1]));
+const missId = used.filter((k) => !idKeys.has(k));
+const missEn = used.filter((k) => !enKeys.has(k));
+console.log("used keys:", used.length);
+console.log("missing in ID:", missId.length ? missId.join(", ") : "none");
+console.log("missing in EN:", missEn.length ? missEn.join(", ") : "none");
