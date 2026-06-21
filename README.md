@@ -3,7 +3,7 @@
 Premium traditional Indonesian spa website — a fast, mobile-first, single-page static site.
 Built faithfully on the provided `code.html` layout and the `DESIGN.md` design system ("Nusantara Wellness").
 
-**Live target:** `https://djaya-massage.vercel.app/`
+**Live target:** `https://djaya-apps.vercel.app/`
 
 ## Tech
 
@@ -79,4 +79,4 @@ Number: **+62 852-7835-5590** · Instagram: **@djayamassage**
 
 - **Operating hours** (`10:00–22:00 WIB`, daily) are carried over from `code.html` — confirm with the business and update both the Location section and the JSON-LD `openingHoursSpecification`.
 - **Logo:** the official `Logo.pdf` is the print master. The web header uses the `DJAYA` wordmark (as in `code.html`); the favicon uses the brand cairn motif. To use the exact logo mark on the site, export `Logo.pdf` to PNG/SVG and drop it into `assets/img/`.
-- **Canonical domain:** update the `https://djaya-massage.vercel.app/` URL in `index.html` (canonical + OG), `robots.txt`, and `sitemap.xml` once the final domain is known.
+- **Canonical domain:** update the `https://djaya-apps.vercel.app/` URL in `index.html` (canonical + OG), `robots.txt`, and `sitemap.xml` once the final domain is known.
