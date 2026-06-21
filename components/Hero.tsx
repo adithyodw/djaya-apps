@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section id="top" className="relative min-h-[88vh] flex items-end overflow-hidden">
       <Image
-        src="/img/hero.jpg"
+        src="/img/hero.png"
         alt="Logo Djaya Massage & Reflexology Batam — spa premium di Penuin Centre"
         fill
         priority

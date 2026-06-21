@@ -10,7 +10,7 @@ export const BUSINESS = {
   instagram: "https://www.instagram.com/djayamassage/",
   googleMaps:
     "https://www.google.com/maps/search/?api=1&query=Djaya+Massage+Reflexology+Penuin+Centre+Blok+A+No+14+Batam",
-  googleReview: "https://g.page/r/Ce-eS6a0fZYUEAE/review",
+  googleReview: "https://share.google/ChNvLsg4iA99wMZlD",
   tripadvisor:
     "https://www.tripadvisor.com.sg/Attraction_Review-g2270770-d32888084-Reviews-Djaya_Massage_Reflexology_Batam-Nagoya_Batam_Riau_Archipelago_Riau_Islands_Prov.html",
   address: {
@@ -50,7 +50,7 @@ export function structuredDataGraph() {
         description:
           "Premium traditional Indonesian massage and foot reflexology in Batam. Rated 4.9 stars on Google. Foot reflexology, Balinese massage, hot stones, and signature spa rituals in Penuin Centre, Lubuk Baja — near Grand Batam Mall and Nagoya.",
         url: SITE,
-        image: [`${SITE}/img/og-card.jpg`, `${SITE}/img/hero.jpg`],
+        image: [`${SITE}/img/og-card.jpg`, `${SITE}/img/hero.png`],
         telephone: BUSINESS.phone,
         priceRange: BUSINESS.priceRange,
         currenciesAccepted: "IDR",
@@ -120,7 +120,7 @@ export function structuredDataGraph() {
         description:
           "Official website of Djaya Massage & Reflexology Batam — book premium massage and reflexology in Penuin, Lubuk Baja. Best-rated spa for massage Batam and reflexology Batam.",
         inLanguage: "id-ID",
-        primaryImageOfPage: { "@type": "ImageObject", url: `${SITE}/img/hero.jpg` },
+        primaryImageOfPage: { "@type": "ImageObject", url: `${SITE}/img/hero.png` },
       },
       {
         "@type": "FAQPage",

@@ -56,7 +56,7 @@ Pre-filled booking message: "Hello Djaya Massage Batam, I would like to book a t
 ## External Profiles
 - Instagram: https://www.instagram.com/djayamassage/
 - TripAdvisor: https://www.tripadvisor.com.sg/Attraction_Review-g2270770-d32888084-Reviews-Djaya_Massage_Reflexology_Batam-Nagoya_Batam_Riau_Archipelago_Riau_Islands_Prov.html
-- Google Reviews: https://g.page/r/Ce-eS6a0fZYUEAE/review
+- Google: https://share.google/ChNvLsg4iA99wMZlD
 
 ## Website
 Built with Next.js. Bilingual ID/EN. Official site: https://djaya-apps.vercel.app/

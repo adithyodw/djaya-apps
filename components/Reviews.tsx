@@ -3,9 +3,10 @@
 import { useLang } from "./LanguageProvider";
 import { t } from "@/lib/i18n";
 import { reviews } from "@/lib/content";
+import { BUSINESS } from "@/lib/seo";
 import Reveal from "./Reveal";
 
-const GOOGLE_REVIEW = "https://g.page/r/Ce-eS6a0fZYUEAE/review";
+const GOOGLE_REVIEW = BUSINESS.googleReview;
 const TRIPADVISOR =
   "https://www.tripadvisor.com.sg/Attraction_Review-g2270770-d32888084-Reviews-Djaya_Massage_Reflexology_Batam-Nagoya_Batam_Riau_Archipelago_Riau_Islands_Prov.html";
 
