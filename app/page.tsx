@@ -5,6 +5,7 @@ import PromoBanner from "@/components/PromoBanner";
 import SeoFacts from "@/components/SeoFacts";
 import About from "@/components/About";
 import WhyDjaya from "@/components/WhyDjaya";
+import BlogSection from "@/components/BlogSection";
 import Menu from "@/components/Menu";
 import Signature from "@/components/Signature";
 import Booking from "@/components/Booking";
@@ -37,6 +38,7 @@ export default function Home() {
             <SeoFacts />
             <About />
             <WhyDjaya />
+            <BlogSection />
             <Menu />
             <Signature />
             <Booking />

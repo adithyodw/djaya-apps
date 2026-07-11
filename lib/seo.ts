@@ -1,4 +1,5 @@
 import { faqEn } from "./faq";
+import { blogPosts } from "./blog";
 
 /** Canonical production domain */
 export const SITE = "https://djayamassagebatam.com";
@@ -145,11 +146,23 @@ export function structuredDataGraph() {
         },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
-          name: "Djaya Massage Batam Treatment Menu",
+          name: "Djaya Massage Batam Premier Treatments",
           itemListElement: [
             offer(
+              "Djaya Signature 3-in-1 Healing Ritual",
+              "Recommended after ferry or flight travel. Body scrub, aromatherapy massage, and ear candling in one 150-minute ritual that resets circulation and calms the nervous system post-travel.",
+              "420000",
+              "150 minutes",
+            ),
+            offer(
+              "Complete Foot, Back, Shoulder & Head",
+              "Recommended for sports and physical strain. Combines foot reflexology with back, shoulder, and head massage to ease tight muscle bands and support recovery after golf, gym, or long walks.",
+              "170000",
+              "60–120 minutes",
+            ),
+            offer(
               "Foot Reflexology Batam",
-              "Pressure on reflex points of the soles to improve circulation, relieve fatigue, and rebalance body energy. Ideal for travelers after long walks or ferry trips.",
+              "Recommended for everyday stress and mental overload. Traditional zone therapy on the soles stimulates nerve pathways, lowers stress response, and delivers immediate whole-body relaxation.",
               "150000",
               "60–120 minutes",
             ),
@@ -170,12 +183,6 @@ export function structuredDataGraph() {
               "Warm volcanic stones placed on tension points to boost circulation and release deep-seated stress.",
               "340000",
               "90–120 minutes",
-            ),
-            offer(
-              "Djaya Signature 3-in-1 Healing Ritual",
-              "Body scrub, aromatherapy massage, and ear candling in one 150-minute signature healing experience.",
-              "420000",
-              "150 minutes",
             ),
           ],
         },
@@ -210,8 +217,43 @@ export function structuredDataGraph() {
         },
         speakable: {
           "@type": "SpeakableSpecification",
-          cssSelector: ["#seo-answer", "#about-heading", "#faq-heading", "h1"],
+          cssSelector: ["#seo-answer", "#journal-heading", "#faq-heading", "h1"],
         },
+      },
+      {
+        "@type": "Blog",
+        "@id": `${SITE}/#journal`,
+        name: "Djaya Wellness Journal",
+        description:
+          "Why your body needs massage — travel fatigue, sports recovery, and everyday stress mapped to Djaya treatments in Batam.",
+        url: `${SITE}/#journal`,
+        publisher: { "@id": `${SITE}/#business` },
+        blogPost: blogPosts.map((post) => ({
+          "@type": "BlogPosting",
+          "@id": `${SITE}/#${post.slug}`,
+          headline: post.title("en"),
+          description: post.solution("en"),
+          image: `${SITE}${post.img}`,
+          url: `${SITE}/#${post.slug}`,
+          author: { "@id": `${SITE}/#business` },
+          publisher: { "@id": `${SITE}/#business` },
+          mainEntityOfPage: `${SITE}/#${post.slug}`,
+          about: {
+            "@type": "Service",
+            name: post.treatment,
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "IDR",
+              price: post.priceFrom.replace(/[^\d]/g, ""),
+            },
+          },
+          keywords: [
+            "massage in Batam",
+            "best massage in Batam",
+            "reflexology in Batam",
+            post.treatment,
+          ],
+        })),
       },
       {
         "@type": "FAQPage",
@@ -234,20 +276,26 @@ export function structuredDataGraph() {
           {
             "@type": "ListItem",
             position: 2,
-            name: "Treatment Menu",
-            item: `${SITE}/#menu`,
+            name: "Wellness Journal",
+            item: `${SITE}/#journal`,
           },
           {
             "@type": "ListItem",
             position: 3,
-            name: "Location",
-            item: `${SITE}/#location`,
+            name: "Treatment Menu",
+            item: `${SITE}/#menu`,
           },
           {
             "@type": "ListItem",
             position: 4,
             name: "FAQ",
             item: `${SITE}/#faq`,
+          },
+          {
+            "@type": "ListItem",
+            position: 5,
+            name: "Location",
+            item: `${SITE}/#location`,
           },
         ],
       },

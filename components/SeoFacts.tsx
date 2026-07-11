@@ -1,81 +1,79 @@
 /**
- * Server-rendered fact block for Google + AI crawlers.
- * Always present in HTML without client JS — critical for GEO.
+ * SSR fact block for Google + AI crawlers — visually refined for luxury UX.
+ * Content stays machine-readable; presentation is editorial, not a keyword dump.
  */
-import { BUSINESS, SITE } from "@/lib/seo";
+import { BUSINESS } from "@/lib/seo";
 
 export default function SeoFacts() {
   return (
     <section
       id="seo-answer"
-      className="px-[26px] pt-10 pb-2"
+      className="px-[26px] pt-12 pb-4"
       aria-label="Key facts about Djaya Massage Batam"
     >
-      <p className="text-[15px] leading-[1.72] text-ink font-semibold m-0 mb-3">
-        Djaya Massage &amp; Reflexology is a premium massage and reflexology spa in
-        Batam, rated {BUSINESS.rating.value} on Google, known for traditional
-        Indonesian hospitality, professional therapists, and a clean, calming
-        treatment space in Penuin Centre.
+      <div className="w-8 h-px bg-gold mb-6" aria-hidden />
+      <p className="font-display text-[22px] leading-[1.35] text-ink m-0 mb-5 italic">
+        A premium massage and reflexology sanctuary in Batam — rated{" "}
+        {BUSINESS.rating.value} on Google — for travelers and locals who seek
+        authentic Indonesian healing.
       </p>
-      <p className="text-[14px] leading-[1.65] text-ink-soft m-0 mb-4">
-        Looking for the best massage in Batam or reflexology in Batam? Djaya offers
-        foot reflexology, traditional Indonesian massage, Balinese warm-oil massage,
-        hot stones, and signature rituals — with transparent pricing from{" "}
-        {BUSINESS.priceRangeDisplay}, open daily {BUSINESS.hours.replace("Daily ", "")}.
+      <p className="text-[13.5px] leading-[1.75] text-ink-soft m-0 mb-8">
+        Djaya Massage &amp; Reflexology offers foot reflexology, traditional
+        Indonesian massage, Balinese warm-oil, hot stones, and signature rituals
+        in Penuin Centre, near Grand Batam Mall and Nagoya. Open daily{" "}
+        {BUSINESS.hours.replace("Daily ", "")}. Treatments from{" "}
+        {BUSINESS.priceRangeDisplay}.
       </p>
-      <ul className="m-0 mb-2 pl-5 text-[13.5px] leading-[1.7] text-ink-soft space-y-1.5">
-        <li>
-          <strong className="text-ink">Address:</strong> {BUSINESS.address.street},{" "}
-          {BUSINESS.address.locality}, Batam {BUSINESS.address.postalCode}, Indonesia
-        </li>
-        <li>
-          <strong className="text-ink">Near:</strong> Grand Batam Mall, A2 Foodcourt,
-          Nagoya, Lubuk Baja
-        </li>
-        <li>
-          <strong className="text-ink">WhatsApp booking:</strong>{" "}
-          <a href={BUSINESS.whatsapp} className="text-terracotta font-semibold">
-            {BUSINESS.phoneDisplay}
+
+      <dl className="m-0 grid gap-0 border-t border-card-line">
+        <div className="flex gap-4 py-3.5 border-b border-card-line">
+          <dt className="flex-none w-[72px] text-[10px] tracking-[0.18em] uppercase text-gold-ink font-bold pt-0.5">
+            Visit
+          </dt>
+          <dd className="m-0 text-[13px] leading-[1.55] text-ink-soft">
+            {BUSINESS.address.street}
+            <br />
+            {BUSINESS.address.locality}, Batam {BUSINESS.address.postalCode}
+          </dd>
+        </div>
+        <div className="flex gap-4 py-3.5 border-b border-card-line">
+          <dt className="flex-none w-[72px] text-[10px] tracking-[0.18em] uppercase text-gold-ink font-bold pt-0.5">
+            Book
+          </dt>
+          <dd className="m-0 text-[13px] leading-[1.55]">
+            <a
+              href={BUSINESS.whatsapp}
+              className="text-ink font-semibold no-underline border-b border-gold/40"
+            >
+              {BUSINESS.phoneDisplay}
+            </a>
+            <span className="text-clay"> · WhatsApp</span>
+          </dd>
+        </div>
+        <div className="flex gap-4 py-3.5 border-b border-card-line">
+          <dt className="flex-none w-[72px] text-[10px] tracking-[0.18em] uppercase text-gold-ink font-bold pt-0.5">
+            Hours
+          </dt>
+          <dd className="m-0 text-[13px] leading-[1.55] text-ink-soft">{BUSINESS.hours}</dd>
+        </div>
+      </dl>
+
+      <nav
+        aria-label="Page sections"
+        className="flex flex-wrap gap-x-4 gap-y-2 mt-7 text-[11px] tracking-[0.12em] uppercase"
+      >
+        {[
+          ["#why-djaya", "Why Djaya"],
+          ["#journal", "Journal"],
+          ["#menu", "Menu"],
+          ["#faq", "FAQ"],
+          ["#location", "Location"],
+          ["#booking", "Book"],
+        ].map(([href, label]) => (
+          <a key={href} href={href} className="text-gold-ink font-bold no-underline hover:text-ink transition-colors">
+            {label}
           </a>
-        </li>
-        <li>
-          <strong className="text-ink">Hours:</strong> {BUSINESS.hours}
-        </li>
-        <li>
-          <strong className="text-ink">Official site:</strong>{" "}
-          <a href={SITE} className="text-terracotta font-semibold">
-            {SITE.replace("https://", "")}
-          </a>
-        </li>
-      </ul>
-      <nav aria-label="Page sections" className="flex flex-wrap gap-x-3 gap-y-1 text-[12px] mt-4">
-        <a href="#about" className="text-gold-ink font-semibold no-underline">
-          Why Djaya
-        </a>
-        <span className="text-clay" aria-hidden>
-          ·
-        </span>
-        <a href="#menu" className="text-gold-ink font-semibold no-underline">
-          Treatment Menu
-        </a>
-        <span className="text-clay" aria-hidden>
-          ·
-        </span>
-        <a href="#faq" className="text-gold-ink font-semibold no-underline">
-          FAQ
-        </a>
-        <span className="text-clay" aria-hidden>
-          ·
-        </span>
-        <a href="#location" className="text-gold-ink font-semibold no-underline">
-          Location
-        </a>
-        <span className="text-clay" aria-hidden>
-          ·
-        </span>
-        <a href="#booking" className="text-gold-ink font-semibold no-underline">
-          Book
-        </a>
+        ))}
       </nav>
     </section>
   );
