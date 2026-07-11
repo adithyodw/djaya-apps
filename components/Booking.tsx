@@ -9,10 +9,12 @@ export default function Booking() {
   const { lang } = useLang();
   const tr = t(lang);
   return (
-    <section className="px-[26px] pt-[18px] pb-[52px] text-center">
+    <section id="booking" className="px-[26px] pt-[18px] pb-[52px] text-center" aria-labelledby="booking-heading">
       <Reveal>
         <div className="text-[11px] tracking-[0.26em] uppercase text-gold-ink font-bold mb-3.5">{tr.bookLabel}</div>
-        <h2 className="font-display font-semibold text-[33px] leading-[1.12] text-ink m-0 mb-3.5">{tr.bookHead}</h2>
+        <h2 id="booking-heading" className="font-display font-semibold text-[33px] leading-[1.12] text-ink m-0 mb-3.5">
+          {tr.bookHead}
+        </h2>
         <p className="text-[14.5px] leading-[1.7] text-ink-soft mx-auto mb-6 max-w-[330px]">{tr.bookBody}</p>
         <a
           href={wa(bookMsg(lang))}

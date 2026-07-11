@@ -1,17 +1,23 @@
 # Djaya Massage & Reflexology Batam
-# https://djaya-apps.vercel.app
+# https://djayamassagebatam.com
 
 User-agent: *
 Allow: /
 
-# AI search & LLM crawlers
+# AI search & LLM crawlers — Generative Engine Optimization
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
 Allow: /
 
 User-agent: anthropic-ai
@@ -26,6 +32,9 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
 
@@ -35,4 +44,10 @@ Allow: /
 User-agent: DeepSeekBot
 Allow: /
 
-Sitemap: https://djaya-apps.vercel.app/sitemap.xml
+User-agent: Bytespider
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://djayamassagebatam.com/sitemap.xml

@@ -2,13 +2,15 @@ import { LanguageProvider } from "@/components/LanguageProvider";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PromoBanner from "@/components/PromoBanner";
+import SeoFacts from "@/components/SeoFacts";
 import About from "@/components/About";
+import WhyDjaya from "@/components/WhyDjaya";
 import Menu from "@/components/Menu";
 import Signature from "@/components/Signature";
 import Booking from "@/components/Booking";
 import Reviews from "@/components/Reviews";
-import Location from "@/components/Location";
 import FaqSection from "@/components/FaqSection";
+import Location from "@/components/Location";
 import InstagramSection from "@/components/InstagramSection";
 import Footer from "@/components/Footer";
 import StickyBook from "@/components/StickyBook";
@@ -16,7 +18,6 @@ import StickyBook from "@/components/StickyBook";
 export default function Home() {
   return (
     <LanguageProvider>
-      {/* Dark espresso backdrop with the centered app-style column — exactly per the design */}
       <div
         className="min-h-screen"
         style={{
@@ -32,7 +33,10 @@ export default function Home() {
           <main className="pb-[104px]">
             <Hero />
             <PromoBanner />
+            {/* SSR-readable direct-answer block for Google + AI crawlers */}
+            <SeoFacts />
             <About />
+            <WhyDjaya />
             <Menu />
             <Signature />
             <Booking />

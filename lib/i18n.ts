@@ -34,8 +34,8 @@ export function t(lang: Lang) {
     heroEyebrow: "Batam · Penuin Centre",
     heroSub: L(
       lang,
-      "Pengalaman penyembuhan tradisional Indonesia yang autentik & premium.",
-      "An authentic, premium traditional Indonesian healing experience.",
+      "Sanctuary premium untuk relaksasi & reflexology terbaik di Batam.",
+      "The ultimate sanctuary for premium massage and reflexology in Batam.",
     ),
     ctaBook: L(lang, "Booking via WhatsApp", "Book via WhatsApp"),
     ctaMenu: L(lang, "Lihat Menu Treatment", "View Treatment Menu"),
@@ -60,6 +60,56 @@ export function t(lang: Lang) {
       "Dari refleksi kaki hingga pijat tradisional Bali, setiap perawatan dirancang untuk memulihkan tubuh dan menenangkan pikiran — di Penuin Centre, dekat Grand Batam Mall.",
       "From foot reflexology to Balinese warm-oil massage, every treatment restores body and mind — in Penuin Centre, near Grand Batam Mall and Nagoya.",
     ),
+
+    whyLabel: L(lang, "Keunggulan Djaya", "The Djaya Difference"),
+    whyHead: L(
+      lang,
+      "Mengapa Djaya adalah pilihan massage terbaik di Batam",
+      "Why Djaya is the best massage in Batam",
+    ),
+    whyLead: L(
+      lang,
+      "Djaya Massage & Reflexology Batam dipercaya tamu lokal dan wisatawan Singapura karena terapis berpengalaman, kebersihan tinggi, dan perawatan tradisional yang autentik.",
+      "Djaya Massage & Reflexology Batam is trusted by locals and Singapore travelers for experienced therapists, high hygiene standards, and authentic traditional treatments.",
+    ),
+    whyBody: L(
+      lang,
+      "Setiap sesi dirancang untuk hasil nyata: tubuh lebih ringan, pegal berkurang, dan pikiran lebih tenang — tanpa kompromi pada kenyamanan atau transparansi harga.",
+      "Every session is designed for real results: a lighter body, less tension, and a quieter mind — without compromising comfort or price transparency.",
+    ),
+    whySub1: L(lang, "Standar E-E-A-T kami", "Our trust standards"),
+    whyPoint1: L(
+      lang,
+      "Terapis profesional yang terlatih untuk pijat tradisional, reflexology, dan teknik penyembuhan Indonesia.",
+      "Professional therapists trained in traditional massage, reflexology, and Indonesian healing techniques.",
+    ),
+    whyPoint2: L(
+      lang,
+      "Lingkungan bersih, tenang, dan premium di Penuin Centre — ideal setelah perjalanan ferry atau hari penuh di Batam.",
+      "A clean, calm, premium environment in Penuin Centre — ideal after a ferry trip or a full day in Batam.",
+    ),
+    whyPoint3: L(
+      lang,
+      "Minyak pijat Indonesia autentik berkualitas tinggi untuk pengalaman penyembuhan yang natural.",
+      "Authentic, high-quality Indonesian massage oils for a natural healing experience.",
+    ),
+    whyPoint4: L(
+      lang,
+      "Booking mudah via WhatsApp, buka setiap hari 10.00–22.00, rating 4.9 di Google.",
+      "Easy WhatsApp booking, open daily 10 AM–10 PM, rated 4.9 on Google.",
+    ),
+    whySub2: L(
+      lang,
+      "Harga transparan — massage & reflexology Batam",
+      "Transparent pricing — massage & reflexology Batam",
+    ),
+    whyColService: L(lang, "Perawatan", "Treatment"),
+    whyColFrom: L(lang, "Mulai", "From"),
+    whyRow1: L(lang, "Refleksi Kaki (60 menit)", "Foot Reflexology (60 min)"),
+    whyRow2: L(lang, "Pijat Tradisional (60 menit)", "Traditional Massage (60 min)"),
+    whyRow3: L(lang, "Pijat Minyak Hangat Bali (60 menit)", "Balinese Warm-Oil (60 min)"),
+    whyRow4: L(lang, "Batu Panas Mineral (90 menit)", "Mineral Hot Stones (90 min)"),
+    whyRow5: L(lang, "Signature 3-in-1 (150 menit)", "Signature 3-in-1 (150 min)"),
     pillar1t: L(lang, "Terapis Profesional", "Pro Therapists"),
     pillar1d: L(lang, "Terlatih & berpengalaman", "Trained & experienced"),
     pillar2t: L(lang, "Minyak Indonesia Asli", "Authentic Oils"),
@@ -70,11 +120,15 @@ export function t(lang: Lang) {
     pillar4d: L(lang, "Keramahan khas Indonesia", "True Indonesian hospitality"),
 
     menuLabel: L(lang, "Menu", "Menu"),
-    menuHead: L(lang, "Daftar Treatment", "Treatment Menu"),
+    menuHead: L(
+      lang,
+      "Menu massage & reflexology Batam",
+      "Best massage & reflexology treatments in Batam",
+    ),
     menuSub: L(
       lang,
-      "Menu massage & reflexology Batam — harga dalam Rupiah, sesi 30–150 menit.",
-      "Massage & reflexology Batam menu — prices in Rupiah, sessions from 30–150 minutes.",
+      "Harga transparan dalam Rupiah. Sesi 30–150 menit. Booking via WhatsApp.",
+      "Transparent prices in Rupiah. Sessions 30–150 minutes. Book via WhatsApp.",
     ),
 
     sigTitle: "3-in-1 Healing Ritual",
@@ -113,8 +167,13 @@ export function t(lang: Lang) {
     faqLabel: L(lang, "Pertanyaan Umum", "FAQ"),
     faqHead: L(
       lang,
-      "Massage & reflexology di Batam",
-      "Massage & reflexology in Batam",
+      "FAQ: massage & reflexology di Batam",
+      "FAQ: best massage & reflexology in Batam",
+    ),
+    faqLead: L(
+      lang,
+      "Jawaban singkat untuk wisatawan dari Singapura dan Indonesia yang mencari massage terbaik di Batam.",
+      "Clear answers for Singapore and Indonesian travelers searching for the best massage in Batam.",
     ),
 
     footerCredit: L(lang, "Website oleh", "Website by"),

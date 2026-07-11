@@ -18,9 +18,11 @@ const mulish = Mulish({
   display: "swap",
 });
 
-const title = "Massage Batam & Reflexology Batam | Djaya Massage & Reflexology";
+/** Under 60 characters — high-intent primary keywords */
+const title = "Best Massage in Batam | Djaya Reflexology";
+/** Under 155 characters */
 const description =
-  "Djaya Massage & Reflexology Batam — premium massage Batam & reflexology Batam in Penuin Centre, Lubuk Baja. Traditional Indonesian massage, foot reflexology, Balinese warm-oil & hot stones. Rated 4.9 on Google. Book via WhatsApp.";
+  "Djaya Massage & Reflexology Batam — premium massage & reflexology in Penuin Centre. Rated 4.9 on Google. Book via WhatsApp. Open daily 10–22.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
@@ -30,17 +32,19 @@ export const metadata: Metadata = {
   },
   description,
   keywords: [
+    "massage in Batam",
+    "best massage in Batam",
+    "reflexology in Batam",
     "massage Batam",
     "reflexology Batam",
     "spa Batam",
-    "best massage in Batam",
     "foot reflexology Batam",
     "traditional Indonesian massage Batam",
     "Balinese massage Batam",
     "massage Penuin Batam",
     "massage near Grand Batam Mall",
     "massage Nagoya Batam",
-    "spa near Singapore ferry Batam",
+    "massage Singapore ferry Batam",
     "Djaya Massage",
     "Djaya Reflexology",
     "pijat Batam",
@@ -61,7 +65,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: BUSINESS.name,
-    title,
+    title: "Best Massage & Reflexology in Batam | Djaya",
     description,
     url: SITE,
     locale: "id_ID",
@@ -71,15 +75,15 @@ export const metadata: Metadata = {
         url: "/img/og-card.jpg",
         width: 1200,
         height: 630,
-        alt: "Djaya Massage & Reflexology Batam — premium massage and reflexology spa",
+        alt: "Djaya Massage & Reflexology Batam — best massage and reflexology spa in Penuin Centre",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Massage Batam & Reflexology Batam | Djaya Massage",
+    title: "Best Massage in Batam | Djaya Reflexology",
     description:
-      "Premium massage Batam & reflexology Batam in Penuin Centre. Traditional Indonesian spa. Rated 4.9 on Google.",
+      "Premium massage & reflexology in Penuin Centre, Batam. Rated 4.9 on Google. Book via WhatsApp.",
     images: ["/img/og-card.jpg"],
   },
   icons: { icon: "/img/favicon.svg", apple: "/img/favicon.svg" },
@@ -114,7 +118,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="alternate" hrefLang="x-default" href={`${SITE}/`} />
       </head>
       <body className="font-body">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>

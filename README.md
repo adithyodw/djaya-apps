@@ -2,15 +2,16 @@
 
 Premium traditional Indonesian spa website — mobile-first, bilingual (ID/EN), built faithfully from the `Indonesia massage spa design` mockup.
 
-**Live:** [djaya-apps.vercel.app](https://djaya-apps.vercel.app/)
+**Live:** [djayamassagebatam.com](https://djayamassagebatam.com/)
 
 ## Tech stack
 
-- **Next.js 14** (App Router, static export-ready SSG)
+- **Next.js 14** (App Router)
 - **React 18** + **TypeScript**
 - **Tailwind CSS** — design tokens match the Claude design file exactly
 - **Framer Motion** — subtle scroll reveals
 - **next/font** — Cormorant Garamond + Mulish (self-hosted, no layout shift)
+- **SEO / GEO** — JSON-LD LocalBusiness + FAQPage, llms.txt, intent headings, SSR fact block
 
 ## Project structure
 
